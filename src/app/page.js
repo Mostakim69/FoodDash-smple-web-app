@@ -10,14 +10,14 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* <main className="max-w-7xl mx-auto px-6 py-8">
+      <main className="max-w-7xl mx-auto px-6 py-8">
         <Hero />
         <Categories />
         <PopularDishes />
         <PromoCards />
       </main>
 
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
