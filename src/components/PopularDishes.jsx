@@ -7,7 +7,8 @@ export default function PopularDishes() {
     {
       id: 1,
       name: "Chicken Burger",
-      image: "https://images.unsplash.com/photo-1606755962773-0c8c3f7c1b2b",
+      image:
+        "https://i.postimg.cc/Ssn2sXtV/premium-photo-1695758787833-ec3e6817046f-q-80-w-387-auto-format-fit-crop-ixlib-rb-4-1.jpg",
       price: 6.0,
       oldPrice: 10.0,
       rating: 4.9,
@@ -31,7 +32,8 @@ export default function PopularDishes() {
     {
       id: 4,
       name: "Pepperoni Pizza",
-      image: "https://images.unsplash.com/photo-1601924582975-7e670c2f7b29",
+      image:
+        "https://i.postimg.cc/q7zMcPXr/photo-1544982503-9f984c14501a-w-500-auto-format-fit-crop-q-60-ixlib-rb-4-1.jpg",
       price: 14.0,
       oldPrice: 18.0,
       rating: 4.7,

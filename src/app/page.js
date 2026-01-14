@@ -10,12 +10,30 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Categories />
-      <PopularDishes />
-      <FeaturesSection />
-      <PromoCards />
-      <Footer />
+
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="categories">
+        <Categories />
+      </section>
+
+      <section id="popular-dishes">
+        <PopularDishes />
+      </section>
+
+      <section id="features">
+        <FeaturesSection />
+      </section>
+
+      <section id="promo-cards">
+        <PromoCards />
+      </section>
+
+      <section id="contact">
+        <Footer />
+      </section>
     </>
   );
 }

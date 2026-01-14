@@ -7,19 +7,19 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Scroll spy
+  // Scroll spy to highlight active section
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
         "hero",
-        "about",
+        "categories",
+        "popular-dishes",
         "features",
-        "testimonials",
-        "pricing",
+        "promo-cards",
         "contact",
       ];
 
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 100; // Offset for fixed navbar
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -34,7 +34,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    handleScroll(); // Run once on mount
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,16 +53,17 @@ const Navbar = () => {
 
   const navItems = [
     { id: "hero", label: "Home" },
-    { id: "about", label: "About" },
+    { id: "categories", label: "Categories" },
+    { id: "popular-dishes", label: "Dishes" },
     { id: "features", label: "Features" },
-    { id: "testimonials", label: "Testimonials" },
-    { id: "pricing", label: "Pricing" },
+    { id: "promo-cards", label: "Promo Cards" },
   ];
 
+  // Smooth scroll to section
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 90;
+      const offset = 90; // navbar height
       const bodyTop = document.body.getBoundingClientRect().top;
       const elementTop = element.getBoundingClientRect().top;
       const position = elementTop - bodyTop - offset;
@@ -72,7 +73,7 @@ const Navbar = () => {
         behavior: "smooth",
       });
     }
-    setMobileMenuOpen(false);
+    setMobileMenuOpen(false); // close mobile menu
   };
 
   return (
@@ -101,7 +102,6 @@ const Navbar = () => {
               >
                 {label}
               </span>
-
               {activeSection === id && (
                 <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full" />
               )}
@@ -118,7 +118,7 @@ const Navbar = () => {
           </button>
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-gray-800 z-50"
